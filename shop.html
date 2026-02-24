@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script src="https://kit.fontawesome.com/f6d3689340.js"></script> <!-- Font Awesome Kit -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header"> <!-- This is the Header Section -->
+         <a href="home.html"><img src="images/logo.png" class="Logo" alt="Logo" width="80px" onclick="window.location.reload();"></a> <!-- Logo Image -->
+         <p id="logoname">ShopDen</p>
+        <div> 
+            <ul id="navbar"> <!-- Adding Icons to Navigation Bar -->
+                <li><a  href="home.html"><i class="fa-regular fa-house"></i><span>Home</span></a></li>  
+                <li class="active"><a  href="shop.html"><i class="fa-solid fa-shop"></i><span>Shop</span></a></li> 
+                <li><a  href="blog.html"><i class="fa-solid fa-blog"></i><span>Blog</span></a></li>
+                <li><a  href="research.html"><i class="fa-solid fa-search"></i><span>Research</span></a></li>
+                <li><a  href="cart.html"><i class="fa-solid fa-basket-shopping"></i><span>Cart</span></a></li>
+                <li><a  href="about.html"><i class="fa-solid fa-info"></i><span>About</span></a></li>
+                <li><a  href="contact.html"><i class="fa-solid fa-phone"></i><span>Contact</span></a></li>
+                </ul>
+        </div>
+     </section>
+    <section id="products"> <!-- This is the Products Section -->
+        <h2>Our Products</h2>
+        <div class="product-container"> <!-- Product Items -->
+            <div class="product" data-id="1"> <!-- Individual Product -->
+                <img src="Images/pro1.jpg" alt="Eco-Friendly Paper Bag">
+                <h3>Eco-Friendly Paper Bag</h3>
+                <p>Rs 50.00</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2">  <!-- Individual Product -->
+                <img src="Images/pro2.webp" alt="Organic Cotton T-Shirt">
+                <h3>Reusable Straw Set</h3>
+                <p>Rs 250.00</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3"> <!-- Individual Product -->
+                <img src="Images/pro3.webp" alt="Reusable Shopping Bag">
+                <h3>Bamboo Toothbrush</h3>
+                <p>Rs 175.00</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4"> <!-- Individual Product -->
+                <img src="Images/pro4.webp" alt="Bamboo Toothbrush Set">
+                <h3>Compostable Phone Case</h3>
+                <p>Rs 600.00</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="product-modal" class="modal"> <!-- Modal for Product Details -->
+        <div class="modalcontent">
+            <span class="close">&times;</span> <!-- Close Button -->
+            <h3 id="modal-title"></h3>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <button id="modal-add-to-cart">Add to Cart</button> <!-- Add to Cart Button -->
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Linking JavaScript File -->
+</body>
+</html>

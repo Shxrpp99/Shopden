@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - FoxDen Eco Mart</title>
+    <script src="https://kit.fontawesome.com/f6d3689340.js"></script> <!-- Font Awesome Kit -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header"> <!-- This is the Header Section -->
+         <a href="home.html"><img src="images/logo.png" class="Logo" alt="Logo" width="80px" onclick="window.location.reload();"></a> <!-- Logo Image -->
+         <p id="logoname">ShopDen</p>
+        <div> 
+            <ul id="navbar"> <!-- Adding Icons to Navigation Bar -->
+                <li><a  href="home.html"><i class="fa-regular fa-house"></i><span>Home</span></a></li>  
+                <li><a  href="shop.html"><i class="fa-solid fa-shop"></i><span>Shop</span></a></li> 
+                <li><a  href="blog.html"><i class="fa-solid fa-blog"></i><span>Blog</span></a></li>
+                <li><a  href="research.html"><i class="fa-solid fa-search"></i><span>Research</span></a></li>
+                <li class="active"><a  href="cart.html"><i class="fa-solid fa-basket-shopping"></i><span>Cart</span></a></li>
+                <li><a  href="about.html"><i class="fa-solid fa-info"></i><span>About</span></a></li>
+                <li><a  href="contact.html"><i class="fa-solid fa-phone"></i><span>Contact</span></a></li>
+                </ul>
+        </div>
+     </section>
+    <section id="cart"> <!-- This is the Cart Section -->
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total"> <!-- Cart Total Section --> 
+            <h3>Total: <span id="total-price">Rs 0.00</span></h3> <!-- Display Total Price -->
+        </div>
+    </section>
+
+    <script> // JavaScript to handle cart functionality
+        document.addEventListener('DOMContentLoaded', () => { // On DOM load
+            renderCart();
+        });
+        function renderCart() { // Render cart items
+            const cartItemsContainer = document.getElementById('cart-items');  // Get cart items container
+            const totalPriceElement = document.getElementById('total-price'); // Get total price element
+            let cart = JSON.parse(localStorage.getItem('cart')) || []; // Get cart from localStorage
+            let total = 0; // Initialize total price
+
+            cartItemsContainer.innerHTML = ''; // Clear existing items
+
+            if (cart.length === 0) {   // If cart is empty
+                cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                totalPriceElement.textContent = 'Rs 0.00';
+            } else {
+                cart.forEach((item, index) => { // Display each cart item
+                    const itemDiv = document.createElement('div'); // Create div for cart item
+                    itemDiv.className = 'cart-item';
+                    itemDiv.innerHTML = ` 
+                        <div>
+                            <h4>${item.name}</h4>
+                            <p>${item.price}</p> 
+                        </div>
+                        <button class="remove-btn" data-index="${index}">Remove</button> 
+                    `;
+                    cartItemsContainer.appendChild(itemDiv); // Append item to cart container
+                    const priceValue = parseFloat(item.price.replace('Rs ', '')); // Extract numeric value
+                    total += priceValue; // Calculate total price
+                });
+                totalPriceElement.textContent = `Rs ${total.toFixed(2)}`; // Display total price
+
+                // Add event listeners for remove buttons
+                document.querySelectorAll('.remove-btn').forEach(button => { // Remove item from cart
+                    button.addEventListener('click', (e) => {  // On click of remove button
+                        const index = e.target.dataset.index; // Get index of item to remove
+                        removeFromCart(index); // Call remove function
+                    });
+                });
+            }
+        }
+
+        function removeFromCart(index) { // Remove item from cart
+            let cart = JSON.parse(localStorage.getItem('cart')) || []; // Get cart from localStorage
+            cart.splice(index, 1);  // Remove item at index
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update cart in localStorage
+            renderCart();  // Re-render cart
+        }
+    </script>
+</body>
+</html>

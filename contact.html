@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FoxDen Eco Mart</title>
+    <script src="https://kit.fontawesome.com/f6d3689340.js"></script> <!-- Font Awesome Kit -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header"> <!-- This is the Header Section -->
+         <a href="home.html"><img src="images/logo.png" class="Logo" alt="Logo" width="80px" onclick="window.location.reload();"></a> <!-- Logo Image -->
+         <p id="logoname">ShopDen</p>
+        <div> 
+            <ul id="navbar"> <!-- Adding Icons to Navigation Bar -->
+                <li><a  href="home.html"><i class="fa-regular fa-house"></i><span>Home</span></a></li>  
+                <li><a  href="shop.html"><i class="fa-solid fa-shop"></i><span>Shop</span></a></li> 
+                <li><a  href="blog.html"><i class="fa-solid fa-blog"></i><span>Blog</span></a></li>
+                <li><a  href="research.html"><i class="fa-solid fa-search"></i><span>Research</span></a></li>
+                <li><a  href="cart.html"><i class="fa-solid fa-basket-shopping"></i><span>Cart</span></a></li>
+                <li><a  href="about.html"><i class="fa-solid fa-info"></i><span>About</span></a></li>
+                <li class="active"><a  href="contact.html"><i class="fa-solid fa-phone"></i><span>Contact</span></a></li>
+                </ul>
+        </div>
+     </section>
+    <section id="contact"> <!-- This is the Contact Section -->
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="map-container"> <!-- Embedded Google Map -->
+                <iframe src="https://www.google.com/maps?q=26.6554085,87.3019478&z=17&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-info"> <!-- Contact Information -->
+                <h3>Get in Touch</h3>
+                <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/3a7fyNpWDa8qAwge9" target="_blank">Itahari International College, Itahari, Nepal</a></p> <!-- Clickable Address -->
+                <p><strong>Phone:</strong> <a href="tel:98xxxx4570">98XXXX4570</a></p>
+                
+                <h3>Send us a Message</h3>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
