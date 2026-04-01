@@ -1,63 +1,66 @@
-👇
+# 🌿 ShopDen
 
-🌿 ShopDen – Eco-Friendly E-Commerce Website
+ShopDen is a responsive eco-friendly e-commerce website built using HTML, CSS, and JavaScript. It promotes sustainable products through a clean and user-friendly interface.
 
-ShopDen is a modern, responsive eco-friendly e-commerce website built using HTML, CSS, and JavaScript.
-The platform promotes sustainable living by showcasing environmentally friendly products through a clean, user-friendly interface.
+---
 
-🚀 Features
-🛍️ Product listings with images, prices, and descriptions
-🛒 Shopping cart functionality
-🔍 Interactive product preview/modal
-📱 Fully responsive design (mobile, tablet, desktop)
-🎨 Clean and modern UI/UX
-⚡ Dynamic functionality using JavaScript
-🛠️ Built With
-HTML5 – Structure of the website
-CSS3 – Styling and layout design
-JavaScript (Vanilla JS) – Interactivity and cart logic
-Font Awesome – Icons
-📂 Project Structure
+## 🚀 Features
+
+- Product listing with images and prices  
+- Shopping cart functionality  
+- Interactive UI using JavaScript  
+- Fully responsive design  
+- Clean and modern layout  
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5  
+- CSS3  
+- JavaScript  
+
+---
+
+## 📂 Project Structure
+
 ShopDen/
 │
 ├── index.html
 ├── style.css
 ├── script.js
 ├── Images/
-│   ├── pro1.jpg
-│   ├── pro2.jpg
-│   └── ...
 └── README.md
-💡 Project Objective
 
-The goal of this project is to:
+---
 
-Promote eco-friendly and sustainable products 🌱
-Build a functional e-commerce UI without frameworks
-Improve front-end development skills
-Practice JavaScript DOM manipulation
-🖥️ How to Run the Project
-Clone the repository:
-git clone https://github.com/your-username/shopden.git
-Open the project folder
-Run the project:
-Open index.html in your browser
-OR
-Use Live Server in VS Code
-🌱 Future Improvements
-🔐 User authentication system
-💳 Payment gateway integration
-🗄️ Backend (Node.js / Firebase)
-🔎 Product search & filtering
-❤️ Wishlist feature
-👨‍💻 Author
+## ▶️ How to Run
 
-Sohan Gurung
-Front-End Developer
+1. Download or clone the repository:
+   git clone https://github.com/your-username/shopden.git
 
-🔗 LinkedIn:
+2. Open the folder
+
+3. Run index.html in your browser
+
+---
+
+## 🌱 Future Improvements
+
+- Add backend functionality  
+- Payment integration  
+- Product search and filter  
+- User authentication  
+
+---
+
+## 👨‍💻 Author
+
+Sohan Gurung  
 https://www.linkedin.com/in/sohan-gurung-60ab503b2/
 
-📜 License
+---
 
-This project is licensed under the MIT License.
+## 📜 License
+
+MIT License
